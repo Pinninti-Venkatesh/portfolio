@@ -7,7 +7,7 @@ export default async function sitemap() {
     const locales = routing.locales;
 
     let blogs = locales.flatMap((locale) => 
-        getPosts(['src', 'app', '[locale]', 'blog', 'posts', locale]).map((post) => ({
+        getPosts(['src', 'app', '[locale]']).map((post) => ({
             url: `${baseURL}/${locale}/blog/${post.slug}`,
             lastModified: post.metadata.publishedAt,
         }))

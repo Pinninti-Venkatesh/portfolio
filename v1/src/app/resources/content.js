@@ -169,7 +169,7 @@ const about = {
             {
                 title: 'Shopify',
                 iconName:"shopify"
-            },
+            }
         ]
     }
 }

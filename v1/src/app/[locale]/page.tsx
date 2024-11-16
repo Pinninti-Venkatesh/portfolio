@@ -5,6 +5,7 @@ import styles from '@/components/about/about.module.scss'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { ReactElement } from 'react';
 
 export async function generateMetadata(
     { params: { locale } }: { params: { locale: string } }
@@ -268,12 +269,10 @@ export default function About(
                                             {experience.role}
                                         </Text>
                                         <Flex
-                                            // as="ul"
                                             onBackground="neutral-weak"
                                             direction="column" gap="8">
-                                            {experience.achievements.map((achievement: Element, index: any) => (
+                                            {experience.achievements.map((achievement: ReactElement, index: any) => (
                                                 <Text
-                                                    // as="li"
                                                     variant="body-default-m"
                                                     key={`${experience.company}-${index}`}>
                                                     {achievement}
@@ -299,7 +298,8 @@ export default function About(
 
                                 fillWidth wrap={true}>
                                 {about.technical.skills.map((skill) => (
-                                    <Badge style={{ marginRight: '10px', marginBottom: '10px' }} icon={skill.iconName} effect>{skill.title}</Badge>
+                                    skill?(
+                                    <Badge style={{ marginRight: '10px', marginBottom: '10px' }} icon={skill.iconName} effect>{skill.title}</Badge>):null
                                 ))}
                             </Flex>
                         </>

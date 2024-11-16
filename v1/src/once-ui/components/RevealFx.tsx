@@ -82,6 +82,7 @@ const RevealFx = forwardRef<HTMLDivElement, RevealFxProps>(({
 			ref={ref}
 			aria-hidden="true"
 			style={revealStyle}
+			direction='column'
 			className={combinedClassName}
 			{...rest}>
 			{children}

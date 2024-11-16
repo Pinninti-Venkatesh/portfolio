@@ -15,6 +15,7 @@ import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-in
 
 import { routing } from "@/i18n/routing";
 import { renderContent } from "@/app/resources";
+import { Analytics } from "@vercel/analytics/react"
 
 export async function generateMetadata(
 	{ params: { locale }}: { params: { locale: string }}

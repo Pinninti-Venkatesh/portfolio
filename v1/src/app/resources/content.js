@@ -72,10 +72,10 @@ const about = {
             {
                 company: 'Gokwik',
                 timeframe: '2023 December - Present',
-                role: 'Software Development engineer - II',
+                role: 'Software Development Engineer - II',
                 achievements: [
-                    <>As an SDE-2, I’ve taken on responsibilities that require a deeper focus on scalability and system performance. My work includes optimizing critical system flows to ensure high availability and improving system integrations to handle increased user demand seamlessly.</>,
-                    <>I’ve been responsible for handling feature relases,identifying and addressing vulnerabilities in existing workflows, ensuring the system's stability during high-traffic periods. My focus on enhancing monitoring and alerting systems has enabled quicker issue detection, reducing downtime and improving user experiences.</>,
+                    <>As an SDE-2, I've taken on responsibilities that require a deeper focus on scalability and system performance. My work includes optimizing critical system flows to ensure high availability and improving system integrations to handle increased user demand seamlessly.</>,
+                    <>I've been responsible for handling feature releases, identifying and addressing vulnerabilities in existing workflows, ensuring the system's stability during high-traffic periods. My focus on enhancing monitoring and alerting systems has enabled quicker issue detection, reducing downtime and improving user experiences.</>,
                     <>My approach has always been to build solutions that are not just functional but also future-proof, aligning with GoKwik's mission to provide reliable and efficient e-commerce solutions.</>
                 ],
                 link:'https://www.gokwik.co/',
@@ -84,22 +84,22 @@ const about = {
             {
                 company: 'Gokwik',
                 timeframe: '2022 April - 2023 November',
-                role: 'Software Development engineer - I',
+                role: 'Software Development Engineer - I',
                 achievements: [
                     <>During my tenure as an SDE-1 at GoKwik, I worked on improving the reliability and efficiency of our product. One of my notable contributions was redesigning the logging structure, which significantly enhanced our ability to trace issues quickly and efficiently.</>,
-                    <>I also implemented systems like guardrails with various tools, uncovering hidden production bugs that had gone unnoticed but were impacting customers. This proactive approach allowed us to resolve issues faster and improve the overall system stability.</>,
-                    <>I consistently collaborated with cross-functional teams to deliver high-quality solutions under tight deadlines. My ability to adapt to new technologies and tools, such as learning NestJS,shopify allowed me to contribute meaningfully to critical projects while ensuring the solutions were scalable and reliable.</>
+                    <>Implemented systems like guardrails with various tools, uncovering hidden production bugs that had gone unnoticed but were impacting customers. This proactive approach allowed us to resolve issues faster and improve the overall system stability.</>,
+                    <>I consistently collaborated with cross-functional teams to deliver high-quality solutions under tight deadlines. My ability to adapt to new technologies and tools, such as learning NestJS ,shopify allowed me to contribute meaningfully to critical projects while ensuring the solutions were scalable and reliable.</>
                 ],
                 link:'https://www.gokwik.co/',
                 images: []
             },
             {
                 company: 'Newgen',
-                timeframe: '2020 Janury - 2022 March',
+                timeframe: '2020 January - 2022 March',
                 role: 'Software Engineer',
                 achievements: [
                     <><b>Supplier Portal:</b> Designed and implemented a full-stack web application using Node.js and React.js, enabling suppliers to track and create invoices, as well as participate in bidding processes.</>,
-                    <><b>Invoice Processing Optimization</b> Built a solution to extract and process JSON data from QR codes, streamlining invoice data handling.</>,
+                    <><b>Invoice Processing Optimization:</b> Built a solution to extract and process JSON data from QR codes, streamlining invoice data handling.</>,
                     <><b>Custom Data Processing Functionalities:</b> Developed advanced features in Java and JavaScript to process data extracted from documents using multiple OCR engines.</>
                 ],
                 link:'https://newgensoft.com/',

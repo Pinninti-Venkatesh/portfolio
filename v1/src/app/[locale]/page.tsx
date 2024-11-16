@@ -168,7 +168,7 @@ export default function About(
                             <Text
                                 className={styles.textAlign}
                                 variant="display-default-s"
-                                onBackground="neutral-weak">
+                                onBackground="brand-weak">
                                     <LetterFx
                                     speed="slow"
                                     trigger="instant"
@@ -215,7 +215,7 @@ export default function About(
                     {/* </GlitchFx> */}
 
                     {about.intro.display && (
-                        <RevealFx translateY="4">
+                        <RevealFx translateY={4}>
                             <Flex
                                 direction="column"
                                 textVariant="body-default-l"
@@ -227,7 +227,7 @@ export default function About(
 
                     {about.work.display && (
                         <RevealFx
-                            speed="medium"
+                            speed="slow"
                             delay={1}
                             translateY={0}
                         >

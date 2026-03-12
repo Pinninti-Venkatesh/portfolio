@@ -2,12 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-type Team = {
-    name: string;
-    role: string;
-    avatar: string;
-    linkedIn: string;
-};
 
 type Metadata = {
     title: string;

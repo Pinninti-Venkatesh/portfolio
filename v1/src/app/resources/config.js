@@ -1,4 +1,4 @@
-const baseURL = 'demo.app'
+const baseURL = 'demo.app' // base url
 
 // Enable localization
 const i18n = false;

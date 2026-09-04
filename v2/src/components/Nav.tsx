@@ -67,7 +67,7 @@ export default function Nav() {
             href="#top"
             className="font-mono text-sm tracking-tight text-ink transition-colors hover:text-accent"
           >
-            {person.firstName.toLowerCase()}
+            {person.nickname}
             <span className="text-accent">.</span>
           </a>
 

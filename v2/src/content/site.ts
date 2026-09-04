@@ -4,6 +4,9 @@ export const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
+  /** What he actually goes by — used for the nav wordmark. Initials read as an
+   *  offensive word in Telugu, and the surname is a shared house name. */
+  nickname: "venky",
   role: "Staff Engineer",
   tagline: "I build systems that stay up under real load.",
   location: "Bengaluru, India",

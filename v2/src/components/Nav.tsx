@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { nav } from "@/content/site";
+import { nav, person } from "@/content/site";
 
 /**
  * Sticky top nav with scroll-spy. On desktop the active section is marked by a pill
@@ -67,7 +67,8 @@ export default function Nav() {
             href="#top"
             className="font-mono text-sm tracking-tight text-ink transition-colors hover:text-accent"
           >
-            vp<span className="text-accent">.</span>
+            {person.firstName.toLowerCase()}
+            <span className="text-accent">.</span>
           </a>
 
           <nav aria-label="Sections" className="hidden md:block">

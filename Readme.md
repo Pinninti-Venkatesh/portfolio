@@ -31,6 +31,17 @@ https://once-ui.com/templates/magic-portfolio
 
 ---
 
+### Version 2 (v2) — current
+
+- **Framework**: Next.js 15 (App Router) + React 19
+- **Styling**: Tailwind CSS v4 with `@theme` design tokens
+- **Motion**: Framer Motion, with hand-built primitives (scramble, magnetic, spotlight, counters, scroll-spy)
+- **Template**: none — written from scratch
+
+See [`v2/README.md`](./v2/README.md) for structure, the motion layer, and accessibility notes.
+
+---
+
 ## 🚧 Future Plans
 
-This is just the first version of my portfolio. Future iterations (v2 and beyond) will include much more details
+v2 is the current build. v1 is kept in `./v1` for reference.

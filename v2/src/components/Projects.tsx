@@ -13,7 +13,7 @@ export default function Projects() {
         <SectionHeading
           index="03 / Selected work"
           title="Things I've built and kept running"
-          lead="A few systems where the interesting part wasn't writing the code — it was making it survive production."
+          lead="A few systems where the interesting part wasn't writing the code. It was making it survive production."
         />
 
         <div className="grid gap-5 md:grid-cols-2">

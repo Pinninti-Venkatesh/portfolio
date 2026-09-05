@@ -32,23 +32,6 @@ export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-svh items-center overflow-hidden px-5 py-20 sm:py-24 lg:py-16">
       <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10" />
-      <div
-        aria-hidden="true"
-        className="pulse-slow absolute -top-56 left-1/2 -z-10 h-[620px] w-[900px] -translate-x-1/2"
-        style={{
-          background:
-            "radial-gradient(closest-side, rgba(127,155,255,0.13), rgba(127,155,255,0.05) 45%, transparent 78%)",
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="pulse-slow absolute -right-40 top-24 -z-10 h-[560px] w-[560px]"
-        style={{
-          background:
-            "radial-gradient(closest-side, rgba(127,155,255,0.13), transparent 72%)",
-          animationDelay: "-9s",
-        }}
-      />
 
       <div className="mx-auto grid w-full max-w-7xl items-center gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-6">
         <div className="order-2 lg:order-1">

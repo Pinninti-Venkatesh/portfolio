@@ -11,14 +11,6 @@ const icons = { github: Github, linkedin: Linkedin, mail: Mail } as const;
 export default function Contact() {
   return (
     <section id="contact" className="relative scroll-mt-24 overflow-hidden px-5 py-32">
-      <div
-        aria-hidden="true"
-        className="pulse-slow absolute bottom-0 left-1/2 -z-10 h-[520px] w-[900px] -translate-x-1/2"
-        style={{
-          background:
-            "radial-gradient(closest-side, rgba(127,155,255,0.12), transparent 74%)",
-        }}
-      />
 
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>

@@ -95,17 +95,6 @@ body {
   mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
 }
 
-/* --- Ambient glow ---
-   Opacity-only so it stays on the compositor. Deliberately no filter: blur();
-   a large blurred surface being re-rasterised each frame will pin the main thread. */
-@keyframes pulseSlow {
-  0%, 100% { opacity: 0.75; }
-  50%      { opacity: 1; }
-}
-.pulse-slow {
-  animation: pulseSlow 14s ease-in-out infinite;
-  will-change: opacity;
-}
 
 /* --- Caret blink for the scramble line --- */
 @keyframes blink { 0%, 49% { opacity: 1 } 50%, 100% { opacity: 0 } }
@@ -115,7 +104,6 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .animate-marquee,
-  .pulse-slow,
   .animate-blink {
     animation: none !important;
   }
@@ -150,11 +138,6 @@ body {
 @keyframes figureFloat {
   0%, 100% { transform: translate3d(-50%, calc(-50% + 25px), 0); }
   50%      { transform: translate3d(-50%, calc(-50% + 13px), 0); }
-}
-
-@keyframes haloPulse {
-  0%, 100% { opacity: 0.5; }
-  50%      { opacity: 0.9; }
 }
 
 /* ---------- stage ---------- */
@@ -200,6 +183,17 @@ body {
 @media (max-width: 360px) { .orbit-wrap { --orbit-scale: 0.6;  --chip-boost: 1.6;  --r-scale: 0.88; } }
 @media (max-width: 340px) { .orbit-wrap { --orbit-scale: 0.56; --chip-boost: 1.7;  --r-scale: 0.86; } }
 
+/*
+ * Twelve labels trace the invisible ellipse nicely on a wide screen and collide
+ * badly on a narrow one: a label's width does not shrink with the stage the way a
+ * radius does. Below 860px every other one drops out, leaving six still evenly
+ * spaced 60 degrees apart, so the ring keeps its shape rather than developing gaps.
+ * Nothing is lost, the full stack is listed in the Skills section.
+ */
+@media (max-width: 860px) {
+  .orbit-slot:nth-child(even) { display: none; }
+}
+
 /* Pointer parallax. `--tx` / `--ty` are written by SkillOrbit on mousemove;
    the transition smooths them so the scene glides rather than snaps. */
 .orbit-world {
@@ -235,24 +229,6 @@ body {
     rgba(8, 9, 14, 0.62) 0%,
     rgba(8, 9, 14, 0.5) 42%,
     rgba(8, 9, 14, 0) 76%
-  );
-  pointer-events: none;
-}
-
-/* Floor: a flat ellipse under the figure's feet. */
-.orbit-floor {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 540px;
-  height: 540px;
-  translate: -50% -50%;
-  transform: translateY(200px) rotateX(84deg);
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(127, 155, 255, 0.16) 0%,
-    rgba(127, 155, 255, 0.05) 40%,
-    transparent 70%
   );
   pointer-events: none;
 }
@@ -396,26 +372,6 @@ body {
 
 /* ---------- the figure ---------- */
 
-.orbit-halo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 330px;
-  height: 330px;
-  translate: -50% -50%;
-  transform: translateY(-24px) translateZ(-8px);
-  border-radius: 50%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(150, 175, 255, 0.28) 0%,
-    rgba(105, 138, 250, 0.16) 32%,
-    rgba(60, 95, 230, 0.07) 58%,
-    transparent 76%
-  );
-  animation: haloPulse 7s ease-in-out infinite;
-  pointer-events: none;
-}
-
 .orbit-figure {
   position: absolute;
   left: 50%;
@@ -435,8 +391,7 @@ body {
   .ring-spin,
   .chip-unspin,
   .chip-face,
-  .orbit-figure,
-  .orbit-halo {
+  .orbit-figure {
     animation: none !important;
   }
   .orbit-world { transition: none !important; }

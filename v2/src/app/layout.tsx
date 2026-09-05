@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { person } from "@/content/site";
 
-const title = `${person.name} — ${person.role}`;
+const title = `${person.name} · ${person.role}`;
 const description =
   "Staff engineer building high-scale APIs and distributed systems in Node.js, Go and AWS. Six years on platforms that hold 100k+ requests per minute.";
 
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.iamvenkatesh.in"),
   title: {
     default: title,
-    template: `%s — ${person.name}`,
+    template: `%s · ${person.name}`,
   },
   description,
   keywords: [

@@ -26,7 +26,7 @@ export const hero = {
   eyebrow: "Staff Engineer",
   headline: ["Venkatesh", "Pinninti."],
   subline:
-    "I build distributed systems that stay up under real load — six years on backend platforms where downtime is measured in lost revenue, and the operational tooling that keeps them honest.",
+    "I build distributed systems that stay up under real load. Six years on backend platforms where downtime is measured in lost revenue, and the operational tooling that keeps them honest.",
   roles: ["Distributed Systems", "Backend Architecture", "Platform Reliability", "API Design"],
 };
 
@@ -43,7 +43,7 @@ export const about = {
   paragraphs: [
     "I'm a staff engineer with six years on backend systems where failure is expensive and visible. I'm currently at Imagine Learning, and before that spent four years at GoKwik scaling an ecommerce platform from a hundred merchants to ten thousand.",
     "My work sits where architecture meets operations: decomposing monoliths without dropping a request, designing event pipelines that absorb spikes, and building the monitoring that catches a failure before a customer does.",
-    "I care about the unglamorous parts — idempotency, backpressure, graceful degradation, the migration plan. That's usually the difference between a system that demos well and one that survives peak traffic.",
+    "I care about the unglamorous parts: idempotency, backpressure, graceful degradation, the migration plan. That's usually the difference between a system that demos well and one that survives peak traffic.",
   ],
 };
 
@@ -61,23 +61,23 @@ export const experiences: Experience[] = [
   {
     company: "Imagine Learning",
     role: "Staff Engineer",
-    timeframe: "Aug 2026 — Present",
+    timeframe: "Aug 2026 - Present",
     href: "https://www.imaginelearning.com/",
     current: true,
     achievements: [
-      "Staff-level ownership of backend platform work — architecture, scalability and reliability for products used in classrooms at scale.",
+      "Staff-level ownership of backend platform work: architecture, scalability and reliability for products used in classrooms at scale.",
     ],
     stack: [".NET", "C#", "Node.js", "TypeScript", "AWS"],
   },
   {
     company: "GoKwik",
     role: "Software Development Engineer II",
-    timeframe: "Dec 2023 — Aug 2026",
+    timeframe: "Dec 2023 - Aug 2026",
     href: "https://www.gokwik.co/",
     achievements: [
       "Designed and ran services sustaining 100k+ requests per minute, under strict SLAs for latency, availability and consistency.",
-      "Decoupled monolithic customer and address components into a dedicated microservice, improving fault isolation and response times — and executed the cutover with zero downtime for live traffic.",
-      "Built a real-time failure-monitoring microservice on EKS, Kafka and MongoDB that detects anomalies ahead of user impact, auto-downgrades non-critical features and routes to intelligent fallbacks — protecting conversion and revenue.",
+      "Decoupled monolithic customer and address components into a dedicated microservice, improving fault isolation and response times, and executed the cutover with zero downtime for live traffic.",
+      "Built a real-time failure-monitoring microservice on EKS, Kafka and MongoDB that detects anomalies ahead of user impact, auto-downgrades non-critical features and routes to intelligent fallbacks, protecting conversion and revenue.",
       "End-to-end ownership of mission-critical services: performance tuning, cost and operational-overhead reduction, and production incident response.",
       "Drove engineering quality across the team through code review and architectural evaluation.",
     ],
@@ -86,7 +86,7 @@ export const experiences: Experience[] = [
   {
     company: "GoKwik",
     role: "Software Development Engineer I",
-    timeframe: "Apr 2022 — Nov 2023",
+    timeframe: "Apr 2022 - Nov 2023",
     href: "https://www.gokwik.co/",
     achievements: [
       "Redesigned the logging structure, sharply reducing the time to trace a production issue.",
@@ -98,7 +98,7 @@ export const experiences: Experience[] = [
   {
     company: "Newgen Software Technologies",
     role: "Software Engineer Trainee → Software Engineer",
-    timeframe: "Jan 2020 — Apr 2022",
+    timeframe: "Jan 2020 - Apr 2022",
     href: "https://newgensoft.com/",
     achievements: [
       "Supplier Portal: designed and built a full-stack application in Node.js and React enabling suppliers to raise invoices and take part in bidding.",
@@ -123,7 +123,7 @@ export const projects: Project[] = [
     title: "Real-Time Failure Monitoring",
     blurb: "An anomaly detector that degrades a product gracefully instead of failing it.",
     detail:
-      "Built on EKS, Kafka and MongoDB. Watches live signals in real time, and on degradation automatically downgrades non-critical features and routes to fallbacks — so the flow completes rather than errors. Protects revenue during incidents.",
+      "Built on EKS, Kafka and MongoDB. Watches live signals in real time, and on degradation automatically downgrades non-critical features and routes to fallbacks, so the flow completes rather than errors. Protects revenue during incidents.",
     tags: ["Kafka", "EKS", "MongoDB", "Go"],
     metric: "Pre-impact detection",
   },
@@ -145,7 +145,7 @@ export const projects: Project[] = [
   },
   {
     title: "Personal Site",
-    blurb: "This site — designed and built solo.",
+    blurb: "This site. Designed and built solo.",
     detail:
       "Next.js App Router, Tailwind, and a motion layer built around a CSS 3D orbit, scroll-linked reveals and magnetic controls. Fully keyboard navigable and honours prefers-reduced-motion.",
     tags: ["Next.js", "React", "Tailwind", "CSS 3D"],
@@ -188,23 +188,26 @@ export type OrbitRing = {
 export const orbitRings: OrbitRing[] = [
   {
     radius: 190,
-    duration: 34,
+    duration: 18,
     tilt: 71,
     yaw: -6,
     y: 0,
-    // Seven, evenly spaced ~51° apart. Tight radius and a steep tilt on purpose: the
-    // eye only reads an orbit when the labels are close enough together to trace the
-    // ellipse between them. Spread wide they read as scattered points instead.
-    // Seven is about the most that stays legible down to a phone, so the same set
-    // survives at every width — no thinning rules, no gaps in the spacing.
+    // Twelve, evenly spaced 30 degrees apart. The orbit path is invisible, so the
+    // labels themselves are what trace it; more of them makes the ellipse read
+    // more clearly, and the depth fade keeps the far half from crowding the near.
     items: [
       { label: "Node.js", angle: 0 },
-      { label: "TypeScript", angle: 51 },
-      { label: "Distributed Systems", angle: 103 },
-      { label: "Kafka", angle: 154 },
-      { label: "PostgreSQL", angle: 206 },
-      { label: "Go", angle: 257 },
-      { label: "AWS", angle: 309 },
+      { label: "TypeScript", angle: 30 },
+      { label: "Go", angle: 60 },
+      { label: "Java", angle: 90 },
+      { label: "Kafka", angle: 120 },
+      { label: "Redis", angle: 150 },
+      { label: "PostgreSQL", angle: 180 },
+      { label: "MongoDB", angle: 210 },
+      { label: "AWS", angle: 240 },
+      { label: "Kubernetes", angle: 270 },
+      { label: "Docker", angle: 300 },
+      { label: "Distributed Systems", angle: 330 },
     ],
   },
 ];
@@ -231,7 +234,7 @@ export const awards = [
 export const contact = {
   title: "Let's build something that holds",
   body:
-    "I'm open to backend and systems work — architecture reviews, performance rescues, or building a service from scratch.",
+    "I'm open to backend and systems work: architecture reviews, performance rescues, or building a service from scratch.",
   email: "pvenkatesh0614@gmail.com",
 };
 

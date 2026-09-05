@@ -78,8 +78,6 @@ export default function SkillOrbit() {
         <div className="orbit-world" ref={worldRef}>
           <div className="orbit-sway">
             <div className="orbit-fog" aria-hidden="true" />
-            <div className="orbit-floor" aria-hidden="true" />
-            <div className="orbit-halo" aria-hidden="true" />
 
             {orbitRings.map((ring, ri) => {
               const ringVars = {

@@ -54,9 +54,8 @@ export default function Hero() {
         <div className="order-2 lg:order-1">
         <motion.p
           {...rise(0, 0)}
-          className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-accent"
+          className="mb-6 font-mono text-xs uppercase tracking-[0.22em] text-accent"
         >
-          <span className="inline-block h-px w-8 bg-accent" />
           <Scramble text={hero.eyebrow} startDelay={250} />
         </motion.p>
 

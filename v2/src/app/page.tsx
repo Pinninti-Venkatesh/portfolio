@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import About from "@/components/About";
+import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
@@ -28,6 +29,7 @@ export default function Page() {
         <Hero />
         <Stats />
         <About />
+        <Approach />
         <Experience />
         <Projects />
         <Skills />

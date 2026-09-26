@@ -11,7 +11,7 @@ export default function Projects() {
     <section id="projects" className="scroll-mt-24 px-5 py-28">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          index="03 / Selected work"
+          index="04 / Selected work"
           title="Things I've built and kept running"
           lead="A few systems where the interesting part wasn't writing the code. It was making it survive production."
         />
@@ -48,6 +48,15 @@ export default function Projects() {
 
                   <p className="mt-3 text-ink-mid">{p.blurb}</p>
                   <p className="mt-3 text-sm leading-relaxed text-ink-dim">{p.detail}</p>
+
+                  {p.call && (
+                    <p className="mt-4 border-l-2 border-accent-soft pl-3 text-sm leading-relaxed text-ink-mid">
+                      <span className="mr-2 font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
+                        The call
+                      </span>
+                      {p.call}
+                    </p>
+                  )}
 
                   <div className="mt-6 flex flex-wrap gap-1.5 pt-1">
                     {p.tags.map((t) => (

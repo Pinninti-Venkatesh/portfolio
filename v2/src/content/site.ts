@@ -8,7 +8,7 @@ export const person = {
    *  offensive word in Telugu, and the surname is a shared house name. */
   nickname: "venky",
   role: "Staff Engineer",
-  tagline: "I build systems that stay up under real load.",
+  tagline: "Startup speed, big-system discipline.",
   location: "Bengaluru, India",
   avatar: "/images/avatar.png",
   /** Full-height, transparent-background character art for the hero orbit. */
@@ -23,27 +23,27 @@ export const social = [
 ] as const;
 
 export const hero = {
-  eyebrow: "Staff Engineer",
+  eyebrow: "Staff Engineer · Startup-built, scale-tested",
   headline: ["Venkatesh", "Pinninti."],
   subline:
-    "I build distributed systems that stay up under real load. Six years on backend platforms where downtime is measured in lost revenue, and the operational tooling that keeps them honest.",
-  roles: ["Distributed Systems", "Backend Architecture", "Platform Reliability", "API Design"],
+    "Four years inside a hypergrowth startup, scaling a checkout platform from 100 merchants to 10,000 at 100k+ requests a minute. I ship fast without a playbook, and I bring the discipline that stops fast from turning fragile: SLAs, staged rollouts, rollback plans, and monitoring that fires before customers notice.",
+  roles: ["Shipping in Ambiguity", "Distributed Systems", "Reliability at Scale", "Engineering Standards"],
 };
 
 /** Headline metrics. `value` is the number the counter animates to. */
 export const stats = [
-  { value: 100, suffix: "k+", label: "requests / minute", detail: "sustained production throughput" },
+  { value: 10, suffix: "k", prefix: "100→", label: "merchants scaled", detail: "carried through hypergrowth" },
+  { value: 100, suffix: "k+", label: "requests / minute", detail: "under strict latency and availability SLAs" },
+  { value: 0, suffix: "", prefix: "", zeroLabel: "Zero", label: "downtime migrations", detail: "every cutover shipped with a rollback" },
   { value: 6, suffix: " yrs", label: "building backends", detail: "Node.js, Go, Java" },
-  { value: 0, suffix: "", prefix: "", zeroLabel: "Zero", label: "downtime migrations", detail: "monolith → microservice" },
-  { value: 10, suffix: "k", prefix: "100→", label: "merchants scaled", detail: "growth carried by the platform" },
 ];
 
 export const about = {
   title: "About",
   paragraphs: [
-    "I'm a staff engineer with six years on backend systems where failure is expensive and visible. I'm currently at Imagine Learning, and before that spent four years at GoKwik scaling an ecommerce platform from a hundred merchants to ten thousand.",
-    "My work sits where architecture meets operations: decomposing monoliths without dropping a request, designing event pipelines that absorb spikes, and building the monitoring that catches a failure before a customer does.",
-    "I care about the unglamorous parts: idempotency, backpressure, graceful degradation, the migration plan. That's usually the difference between a system that demos well and one that survives peak traffic.",
+    "I spent four years at GoKwik while it grew from a hundred merchants to ten thousand. Most weeks there was no playbook: requirements moved, traffic climbed, and calls had to be made with half the information. I learned to ship anyway.",
+    "What I took from it is that speed and rigor aren't a trade-off. Every migration I ran had a rollback plan. Every critical path had a latency budget and an alert. Code and design review happened even when the deadline was tomorrow, because that's what let us keep shipping the day after.",
+    "Now I'm a staff engineer at Imagine Learning, on platforms used in classrooms at scale, bringing the same mix: move quickly, and leave behind systems and processes the next engineer can trust.",
   ],
 };
 
@@ -76,8 +76,8 @@ export const experiences: Experience[] = [
     href: "https://www.gokwik.co/",
     achievements: [
       "Designed and ran services sustaining 100k+ requests per minute, under strict SLAs for latency, availability and consistency.",
-      "Decoupled monolithic customer and address components into a dedicated microservice, improving fault isolation and response times, and executed the cutover with zero downtime for live traffic.",
-      "Built a real-time failure-monitoring microservice on EKS, Kafka and MongoDB that detects anomalies ahead of user impact, auto-downgrades non-critical features and routes to intelligent fallbacks, protecting conversion and revenue.",
+      "Led the extraction of customer and address handling from the monolith while it served live traffic. Chose a dual-write and shadow-read migration with a staged cutover and rollback at every step: zero downtime, better fault isolation and response times.",
+      "Built a real-time failure-monitoring service on EKS, Kafka and MongoDB that spots anomalies before users feel them, then automatically downgrades non-critical features and routes to fallbacks, so checkout degrades instead of failing.",
       "End-to-end ownership of mission-critical services: performance tuning, cost and operational-overhead reduction, and production incident response.",
       "Drove engineering quality across the team through code review and architectural evaluation.",
     ],
@@ -90,7 +90,7 @@ export const experiences: Experience[] = [
     href: "https://www.gokwik.co/",
     achievements: [
       "Redesigned the logging structure, sharply reducing the time to trace a production issue.",
-      "Implemented guardrail systems that surfaced hidden production bugs already affecting customers.",
+      "Introduced production guardrails on my own initiative, and they surfaced bugs that were already hurting customers.",
       "Shaped new product features by turning business gaps into technical proposals with PMs and stakeholders.",
     ],
     stack: ["Node.js", "NestJS", "MongoDB", "Redis", "Shopify"],
@@ -115,6 +115,8 @@ export type Project = {
   detail: string;
   tags: string[];
   metric?: string;
+  /** The decision made with incomplete information, shown as "The call". */
+  call?: string;
   href?: string;
 };
 
@@ -126,6 +128,7 @@ export const projects: Project[] = [
       "Built on EKS, Kafka and MongoDB. Watches live signals in real time, and on degradation automatically downgrades non-critical features and routes to fallbacks, so the flow completes rather than errors. Protects revenue during incidents.",
     tags: ["Kafka", "EKS", "MongoDB", "Go"],
     metric: "Pre-impact detection",
+    call: "Degrade non-critical features automatically instead of waiting for a human. A slower checkout beats a failed one.",
   },
   {
     title: "Zero-Downtime Monolith Decomposition",
@@ -134,6 +137,7 @@ export const projects: Project[] = [
       "Dual-write and shadow-read migration with a staged cutover and rollback at every step. Improved fault isolation and response times without a maintenance window for anyone on the platform.",
     tags: ["Microservices", "PostgreSQL", "Migration"],
     metric: "0 downtime",
+    call: "No maintenance window, so every step had to be reversible. Slower to ship, but never a moment we couldn't back out of.",
   },
   {
     title: "High-Throughput Commerce Platform",
@@ -142,6 +146,7 @@ export const projects: Project[] = [
       "Latency, availability and consistency SLAs held while the platform grew from a hundred merchants to ten thousand. Work spanned service decomposition, caching strategy, and the operational tooling around releases.",
     tags: ["Node.js", "TypeScript", "AWS ECS", "Redis"],
     metric: "100k+ RPM",
+    call: "Hold the SLAs while the merchant count grew 100x, rather than rewrite and hope. Scale the parts that hurt, when they hurt.",
   },
   {
     title: "Personal Site",
@@ -150,6 +155,26 @@ export const projects: Project[] = [
       "Next.js App Router, Tailwind, and a motion layer built around a CSS 3D orbit, scroll-linked reveals and magnetic controls. Fully keyboard navigable and honours prefers-reduced-motion.",
     tags: ["Next.js", "React", "Tailwind", "CSS 3D"],
     href: "https://www.iamvenkatesh.in",
+  },
+];
+
+/** Operating principles: where startup speed meets big-system discipline. */
+export const principles = [
+  {
+    title: "Ship the smallest reversible thing",
+    detail: "Most calls are made with half the information. Keeping them small and reversible is what makes moving fast safe.",
+  },
+  {
+    title: "No migration without a rollback",
+    detail: "Dual-writes, shadow reads, staged cutovers. If a step can't be undone, it isn't ready to run on live traffic.",
+  },
+  {
+    title: "Monitor before you need to",
+    detail: "The alert, the dashboard and the fallback go in with the feature, not after the first incident.",
+  },
+  {
+    title: "Standards scale, heroics don't",
+    detail: "Code review, design review and written runbooks, even under deadline. That's what lets a small team keep shipping.",
   },
 ];
 
@@ -234,13 +259,14 @@ export const awards = [
 export const contact = {
   title: "Let's build something that holds",
   body:
-    "I'm open to backend and systems work: architecture reviews, performance rescues, or building a service from scratch.",
+    "I'm looking for teams that move like a startup and want to build like they'll be big: backend foundations, reliability, and the engineering bar that lets a small team ship quickly without breaking things.",
   email: "pvenkatesh0614@gmail.com",
 };
 
 export const nav = [
   { id: "top", label: "Home" },
   { id: "about", label: "About" },
+  { id: "approach", label: "Approach" },
   { id: "work", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },

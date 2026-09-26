@@ -22,7 +22,7 @@ export default function Experience() {
     <section id="work" className="scroll-mt-24 px-5 py-28">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          index="02 / Experience"
+          index="03 / Experience"
           title="Six years on systems that can't go down"
         />
 

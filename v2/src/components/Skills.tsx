@@ -8,7 +8,7 @@ export default function Skills() {
   return (
     <section id="skills" className="scroll-mt-24 py-28">
       <div className="mx-auto max-w-6xl px-5">
-        <SectionHeading index="04 / Stack" title="What I reach for" />
+        <SectionHeading index="05 / Stack" title="What I reach for" />
       </div>
 
       {/* infinite marquee — duplicated track, translated -50% */}

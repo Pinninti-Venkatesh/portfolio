@@ -4,7 +4,7 @@ import { person } from "@/content/site";
 
 const title = `${person.name} · ${person.role}`;
 const description =
-  "Staff engineer building high-scale APIs and distributed systems in Node.js, Go and AWS. Six years on platforms that hold 100k+ requests per minute.";
+  "Staff engineer with startup speed and big-system discipline. Scaled a checkout platform from 100 to 10,000 merchants at 100k+ requests per minute, with zero-downtime migrations and strict SLAs.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.iamvenkatesh.in"),

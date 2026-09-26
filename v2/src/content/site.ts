@@ -14,6 +14,8 @@ export const person = {
   /** Full-height, transparent-background character art for the hero orbit. */
   figure: "/images/figure.png",
   resume: "/resume.pdf",
+  /** Name the browser saves the resume under. */
+  resumeFileName: "Venkatesh-Pinninti-Resume.pdf",
 };
 
 export const social = [

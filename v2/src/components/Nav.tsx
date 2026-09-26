@@ -100,14 +100,14 @@ export default function Nav() {
             <a
               href={person.resume}
               download={person.resumeFileName}
-              className="hidden items-center gap-1.5 rounded-full px-3 py-1.5 text-sm text-ink-dim transition-colors hover:text-accent sm:inline-flex"
+              className="hidden items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-ink-dim transition-colors hover:text-accent sm:inline-flex md:hidden lg:inline-flex"
             >
               <Download size={14} aria-hidden="true" />
               Resume
             </a>
             <a
               href="#contact"
-              className="hidden rounded-full border border-line px-4 py-1.5 text-sm text-ink-mid transition-colors hover:border-accent hover:text-accent sm:block"
+              className="hidden whitespace-nowrap rounded-full border border-line px-4 py-1.5 text-sm text-ink-mid transition-colors hover:border-accent hover:text-accent sm:block"
             >
               Get in touch
             </a>

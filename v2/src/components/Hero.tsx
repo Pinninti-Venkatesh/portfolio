@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, MapPin, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Download, MapPin, Github, Linkedin, Mail } from "lucide-react";
 import { hero, person, social } from "@/content/site";
 import Scramble from "./ui/Scramble";
 import Magnetic from "./ui/Magnetic";
@@ -95,6 +95,17 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm text-ink-mid transition-colors hover:border-ink-dim hover:text-ink"
             >
               Get in touch
+            </a>
+          </Magnetic>
+
+          <Magnetic>
+            <a
+              href={person.resume}
+              download={person.resumeFileName}
+              className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm text-ink-mid transition-colors hover:border-accent hover:text-accent"
+            >
+              <Download size={15} aria-hidden="true" />
+              Download resume
             </a>
           </Magnetic>
 

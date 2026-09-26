@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { nav, person } from "@/content/site";
 
 /**
@@ -98,6 +98,14 @@ export default function Nav() {
 
           <div className="flex items-center gap-2">
             <a
+              href={person.resume}
+              download={person.resumeFileName}
+              className="hidden items-center gap-1.5 rounded-full px-3 py-1.5 text-sm text-ink-dim transition-colors hover:text-accent sm:inline-flex"
+            >
+              <Download size={14} aria-hidden="true" />
+              Resume
+            </a>
+            <a
               href="#contact"
               className="hidden rounded-full border border-line px-4 py-1.5 text-sm text-ink-mid transition-colors hover:border-accent hover:text-accent sm:block"
             >
@@ -164,6 +172,15 @@ export default function Nav() {
                 className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-[#0a1020]"
               >
                 Get in touch
+              </a>
+              <a
+                href={person.resume}
+                download={person.resumeFileName}
+                onClick={() => setOpen(false)}
+                className="mt-3 inline-flex w-fit items-center gap-2 rounded-full border border-line px-6 py-3 text-sm text-ink-mid transition-colors hover:border-accent hover:text-accent"
+              >
+                <Download size={15} aria-hidden="true" />
+                Download resume
               </a>
             </nav>
           </motion.div>
